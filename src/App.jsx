@@ -1,9 +1,8 @@
 import React from 'react';
 import {Title} from './components/title/Title'
 import FormInput from './components/form-input/FormInput'
-import {BrowserRouter, HashRouter, Route, Switch} from 'react-router-dom';
 
-export const Main = () => (
+export const App = () => (
   <div>
     <Title title={'главная'}/>
     <Title title={'главная но не совсем'}/>
@@ -12,12 +11,3 @@ export const Main = () => (
     <FormInput labelText={'телефон'} inputType={'phone'} />
   </div>
 );
-
-export const App = () => (
-    <HashRouter>
-        <Switch>
-            <Route exact path={'/'} component={Main} />
-            <Route exact path={'/blog'} component={() => <div>blog</div>} />
-        </Switch>
-    </HashRouter>
-)
