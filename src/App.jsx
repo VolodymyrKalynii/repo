@@ -1,7 +1,7 @@
 import React from 'react';
 import {Title} from './components/title/Title'
 import FormInput from './components/form-input/FormInput'
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, HashRouter, Route, Switch} from 'react-router-dom';
 
 export const Main = () => (
   <div>
@@ -14,10 +14,10 @@ export const Main = () => (
 );
 
 export const App = () => (
-    <BrowserRouter>
+    <HashRouter>
         <Switch>
             <Route exact path={'/'} component={Main} />
             <Route exact path={'/blog'} component={() => <div>blog</div>} />
         </Switch>
-    </BrowserRouter>
+    </HashRouter>
 )
